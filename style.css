@@ -1,0 +1,291 @@
+body{
+    background-color: #3A506B; /* azul acinzentado, remete à cidade */
+    /* Cor de fundo */
+    background-size: auto;
+    /* Tamanho do fundo */
+    font-size: 16px;
+
+}
+.titulo{
+    font-weight: bold;
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 90px;
+    color: #000000;
+    text-align: center;
+    font-weight: 800px;
+    margin-top: 0px;
+   padding: 70px;
+   background: linear-gradient(45deg , #001757, #33cf2d);
+    font-weight: bold;
+    text-shadow: 8px 8px 0px rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    background-size: left 100% ;
+    margin-top: 0% auto;
+    
+}
+.navbar {
+    background-color: #113249;
+    display: flex;
+    justify-content: space-around;
+}
+.navbar a img {
+    height: 30px; /* Ajuste a altura da imagem do logo */
+    width: auto; /* Mantém a proporção da imagem */
+    margin-right: 20px; /* Espaçamento entre o logo e os links */
+    align-items: center; /* Centraliza verticalmente */
+}
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    transition: backgrand-color 3s ease with ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.nav-link:hover {
+background-color: #555;
+}
+.logo {
+    position: relative;
+    top: 20px; /* Distância do topo */
+    align-items: end;
+    height: auto;
+}
+.botoes-de-funcionalidade {
+    position: absolute;
+    top: 10px; /* Define a distância do topo */
+    right: 10px; /* Define a distância da lateral direita */
+    display: flex; /* Alinha os itens em fila */
+    gap: 10px; /* Espaçamento entre os itens */
+    height: 40px; /* Altura dos botões */
+    width: 40px; /* Largura dos botões */
+    align-items: center; /* Alinha os itens verticalmente */
+    
+}
+    .navbar select{
+    background-color: transparent;
+    
+    }
+    .barra-notificacao {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #14532d;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.2em;
+        padding: 18px 40px;
+        border-radius: 0 0 16px 16px;
+        box-shadow: 0 4px 16px #0003;
+        z-index: 9999;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #40916c;
+  padding: 10px;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+section {
+  padding: 20px;
+}
+.intro, .tutorials, .about {
+  max-width: 800px;
+  margin: auto;
+}
+footer {
+  background-color: #2d6a4f;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+.card {
+  background: #40916c;
+  margin: 15px 0;
+  padding: 20px;
+  border-left: 5px solid #2d6a4f;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+.carrossel-fotos {
+  width: 90vw;
+  max-width: 900px;
+  height: 45vw;
+  max-height: 400px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px #0002;
+
+}
+.carrossel-fotos input[type="radio"] {
+  display: none;
+}
+.slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.slide {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.6s;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;    /* Centraliza verticalmente */
+  justify-content: center;/* Centraliza horizontalmente */
+  /* Remova margens/paddings extras se houver */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* Preenche todo o espaço mantendo o foco central */
+  border-radius: 16px;
+  display: block;
+  
+}
+#foto1:checked ~ .slides .s1,
+#foto2:checked ~ .slides .s2,
+#foto3:checked ~ .slides .s3,
+#foto4:checked ~ .slides .s4 {
+  opacity: 1;
+  z-index: 1;
+}
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #14532dcc;
+  color: #fff;
+  font-size: 2.5em;
+  padding: 0 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  z-index: 2;
+  transition: background 0.2s;
+}
+.seta:hover {
+  background: #0e3a1acc;
+}
+.seta.esquerda {
+  left: 16px;
+}
+.seta.direita {
+  right: 16px;
+}
+.navegacao {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+.navegacao label {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ccc;
+  display: block;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#foto1:checked ~ .navegacao label[for="foto1"],
+#foto2:checked ~ .navegacao label[for="foto2"],
+#foto3:checked ~ .navegacao label[for="foto3"],
+#foto4:checked ~ .navegacao label[for="foto4"] {
+  background: #14532d;
+}
+/* Ajustes para telas menores (celulares) */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column; /* Empilha os itens da navbar */
+        align-items: center;
+    }
+
+    .nav-link {
+        padding: 10px; /* Reduz o espaçamento */
+        font-size: 16px; /* Ajusta o tamanho da fonte */
+    }
+
+    .botoes-de-funcionalidade {
+        top: 5px; /* Ajusta a posição */
+        right: 5px;
+        gap: 5px; /* Reduz o espaçamento entre os botões */
+    }
+
+    .botoes-de-funcionalidade button {
+        width: 30px; /* Reduz o tamanho dos botões */
+        height: 30px;
+    }
+
+    .barra-notificacao {
+        font-size: 1em; /* Ajusta o tamanho da fonte */
+        padding: 10px 20px;
+    }
+
+    nav a {
+        margin: 5px 0; /* Reduz o espaçamento entre os links */
+    }
+
+    .card {
+        padding: 10px; /* Ajusta o espaçamento interno */
+    }
+}
+/* Ajustes para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 50px; /* Reduz o tamanho do título */
+        padding: 30px; /* Ajusta o espaçamento */
+    }
+
+    .navbar {
+        flex-direction: column; /* Empilha os itens da navbar */
+    }
+
+    .nav-link {
+        font-size: 14px; /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    .botoes-de-funcionalidade {
+        top: 2px; /* Ajusta a posição dos botões */
+        right: 2px;
+        gap: 2px; /* Reduz o espaçamento entre os botões */
+    }
+
+    .botoes-de-funcionalidade button {
+        width: 25px; /* Reduz ainda mais o tamanho dos botões */
+        height: 25px;
+    }
+}
+.card a {
+    color: #050505;
+    text-decoration: none;
+    font-weight: bold;
+}
+.login-h3 {
+  color: #000000;
+}
