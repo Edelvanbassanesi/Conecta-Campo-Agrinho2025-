@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milho Orgânico | Conecta Campo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/logo.png">
+</head>
+<body>
+    <div class="produto-detalhe-container">
+        <div class="produto-foto">
+            <img src="/img/milho.jpeg" alt="Milho Orgânico">
+        </div>
+        <div class="produto-info">
+            <h2>Milho Orgânico</h2>
+            <p>Milho selecionado, cultivado sem agrotóxicos, ideal para alimentação saudável e sustentável.</p>
+            <div class="produto-preco">R$ 120,00</div>
+            <div class="botoes-produto">
+                <button class="btn-carrinho" onclick="mensagem('Produto adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+                <button class="btn-comprar" onclick="mensagem('Compra realizada com sucesso!')">Comprar</button>
+                <a href="/paginas de compra/conversar/index.html"><button class="btn-comprar">Conversar com o vendedor</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="descricao-produto">
+        <h3>Sobre o produto</h3>
+        <p>
+            O <strong>Milho Orgânico</strong> é cultivado sem o uso de agrotóxicos ou fertilizantes químicos, preservando o sabor natural e os nutrientes essenciais do alimento. Ideal para quem busca uma alimentação mais saudável, sustentável e amiga do meio ambiente. 
+            <br><br>
+            Nosso milho é selecionado desde o plantio até a colheita, garantindo qualidade, frescor e procedência. Perfeito para consumo in natura, receitas, pipoca ou alimentação animal.
+        </p>
+    </div>
+    <div id="mensagem-flutuante"></div>
+    <a href="/paginas de compra/compras organicos/index.html" class="voltar" onmouseover="this.style.background='#218838';this.style.transform='translateX(-50%) scale(1.05)';"
+      onmouseout="this.style.background='#14532d';this.style.transform='translateX(-50%)';">
+        &#8592; Voltar
+    </a>
+    <footer>
+        <p style="margin:0; font-size:1.1em;">
+            &copy; 2025 Conecta Campo. Todos os direitos reservados. &cirE; Edelvan Bassanesi 3° Ano
+        </p>
+        <h5 style="margin:8px 0 0 0; font-weight:normal;">Professor: Luciano dos Santos</h5>
+        <h6 style="margin:4px 0 0 0; font-weight:normal;">Colégio Estadual Barão do Rio Branco</h6>
+    </footer>
+    <script>
+        function mensagem(texto) {
+            var msg = document.getElementById('mensagem-flutuante');
+            msg.textContent = texto;
+            msg.style.display = 'block';
+            setTimeout(function(){
+                msg.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

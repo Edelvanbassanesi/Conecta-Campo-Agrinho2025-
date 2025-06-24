@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/logo.png">
+    <style>
+        .produtos-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            margin: 40px 0 60px 0;
+        }
+        .produto-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #0002;
+            padding: 24px 18px 18px 18px;
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+        .produto-card:hover {
+            transform: scale(1.04);
+            box-shadow: 0 4px 16px #14532d33;
+        }
+        .produto-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 14px;
+            background: #eafaf2;
+        }
+        .produto-card h3 {
+            margin: 8px 0 6px 0;
+            font-size: 1.1em;
+            color: #14532d;
+        }
+        .produto-card p {
+            margin: 0 0 10px 0;
+            color: #333;
+            font-size: 1em;
+        }
+        .produto-card a {
+            background: #14532d;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 22px;
+            font-size: 1em;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 2px 8px #0002;
+            transition: background 0.2s;
+        }
+        .produto-card a:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/img/logo2.png" alt="Logo" style="height:40px;vertical-align:middle;margin-right:18px;">
+        Conecta Campo - Compras 
+        
+    </header>
+    
+    <h1>Escolha a categoria de produtos</h1>
+    <div class="botoes-categorias">
+        <a class="link-agrotoxicos" href="/paginas de compra/compras agrotóxicos/index.html">Agrotóxicos</a>
+        <a class="link-organicos" href="/paginas de compra/compras organicos/index.html">Produtos Orgânicos</a>
+        <a class="link-vender" href="/paginas de compra/vendas dos produtores/index.html">venda de podutores</a>
+        <a class="link-carrinho" href="/carrinho/index.html"> Carrinho <img src="/img/carrinho-de-compras.svg" alt="carrinho"></a>
+    </div>
+    <div class="voltar" style="width:100%; display:flex; justify-content:center; margin:40px 0 0 0;">
+        <a href="/index.html">
+            <button style="background:#14532d; color:#fff; border:none; padding:12px 32px; border-radius:8px; font-size:1.1em; font-weight:bold; cursor:pointer; box-shadow:0 2px 8px #0002;">
+                &#8592; Voltar
+            </button>
+        </a>
+    </div>
+    <footer style="position:fixed; left:0; bottom:0; width:100%; background:#14532d; color:#fff; text-align:center; padding:20px 10px 12px 10px; margin-top:0; z-index:100;">
+        <p style="margin:0; font-size:1.1em;">
+            &copy; 2025 Conecta Campo. Todos os direitos reservados. &cirE; Edelvan Bassanesi 3° Ano
+        </p>
+        <h5 style="margin:8px 0 0 0; font-weight:normal;">Professor: Luciano dos Santos</h5>
+        <h6 style="margin:4px 0 0 0; font-weight:normal;">Colégio Estadual Barão do Rio Branco</h6>
+    </footer>
+</body>
+</html>

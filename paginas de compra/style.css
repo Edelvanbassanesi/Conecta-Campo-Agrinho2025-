@@ -1,0 +1,121 @@
+body {
+    background: #f5f5f5;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+header {
+    width: 100%;
+    background: #14532d;
+    color: #fff;
+    padding: 28px 0 28px 0;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px #0002;
+}
+h1 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    color: #14532d;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+.botoes-categorias {
+    display: flex;
+    gap: 40px;
+}
+.link-agrotoxicos {
+    background: linear-gradient(45deg, #a83232, #ff5e5e);
+    color: #fff !important;
+    border: none;
+    border-radius: 12px;
+    padding: 32px 48px;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 16px #0002;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+}
+.link-agrotoxicos:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px #a8323280;
+}
+.link-organicos {
+    background: linear-gradient(45deg, #388e3c, #a8e063);
+    color: #fff !important;
+    border: none;
+    border-radius: 12px;
+    padding: 32px 48px;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 16px #0002;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+}
+.link-organicos:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px #388e3c80;
+}
+.link-carrinho {
+    background: linear-gradient(45deg, #1b26c4, #76b1f5);
+    color: #fff !important;
+    border: none;
+    border-radius: 12px;
+    padding: 32px 48px;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 16px #0002;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+    align-items: center;
+}
+.link-vender {
+    background: linear-gradient(55deg, #c45f1b, #dcdf48);
+    color: #fff !important;
+    border: none;
+    border-radius: 12px;
+    padding: 32px 48px;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 16px #0002;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+    align-items: center;
+}
+.link-carrinho:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px #388e3c80;
+}
+.link-carrinho img {
+    width: 25px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.voltar button {
+    background: #14532d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease;
+}
+.voltar button:hover {
+    background: #218838;
+}
+.carrinho img{
+    width: 40px;
+    height: auto;
+}
+  

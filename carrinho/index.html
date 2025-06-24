@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras | Conecta Campo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/logo.png">
+</head>
+<body>
+    <header>
+        <img src="/img/logo2.png" alt="Logo" style="height:60px;vertical-align:middle;margin-right:18px;">
+        Conecta Campo - Carrinho de Compras
+    </header>
+    <main>
+        <div class="carrinho-container">
+            <h2 class="carrinho-titulo">Itens no Carrinho</h2>
+            <div class="itens-carrinho">
+                <!-- Exemplo de item no carrinho -->
+                <div class="item-carrinho">
+                    <img src="/img/milho.jpeg" alt="Produto 1">
+                    <div class="item-info">
+                        <h3>Semente de Milho</h3>
+                        <p>Categoria: Orgânico</p>
+                    </div>
+                    <span class="item-preco">R$ 120,00</span>
+                    <button class="remover-btn">Remover</button>
+                </div>
+                <div class="item-carrinho">
+                    <img src="/img/www.agrovesso.com.br.png" alt="Produto 2">
+                    <div class="item-info">
+                        <h3>Inseticida Campo Forte</h3>
+                        <p>Categoria: Agrotóxico</p>
+                    </div>
+                    <span class="item-preco">R$ 95,00</span>
+                    <button class="remover-btn">Remover</button>
+                </div>
+                <!-- Se não houver itens, mostre: -->
+                <!-- <div class="vazio">Seu carrinho está vazio.</div> -->
+            </div>
+            <div class="total-carrinho">
+                Total: R$ 215,00
+            </div>
+            <button class="finalizar-btn">Finalizar Compra</button>
+        </div>
+    </main>
+    <div class="voltar">
+        <a href="/paginas de compra/index.html">&#8592; Voltar para paginas de compra</a>
+        <a href="/index.html">&#8592; Voltar para pagina inicial</a>
+    </div>
+    <footer>
+        <p style="margin:0; font-size:1.1em;">
+            &copy; 2025 Conecta Campo. Todos os direitos reservados. &cirE; Edelvan Bassanesi 3° Ano
+        </p>
+        <h5 style="margin:8px 0 0 0; font-weight:normal;">Professor: Luciano dos Santos</h5>
+        <h6 style="margin:4px 0 0 0; font-weight:normal;">Colégio Estadual Barão do Rio Branco</h6>
+    </footer>
+    <div id="mensagem-flutuante" class="mensagem-flutuante" style="display:none;">      
+        <img src="/img/marca-de-verificacao.png" alt="Checkmark" style="width:24px; height:24px; vertical-align:middle;">
+        Compra concluída com sucesso!
+    </div>
+    <script>
+    document.querySelector('.finalizar-btn').onclick = function(e) {
+        e.preventDefault();
+        var msg = document.getElementById('mensagem-flutuante');
+        msg.style.display = 'block';
+        setTimeout(function(){
+            msg.style.display = 'none';
+        }, 2500);
+        
+    };
+    </script>
+</body>
+</html>

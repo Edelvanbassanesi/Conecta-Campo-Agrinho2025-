@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Produto à Venda | Conecta Campo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/logo.png">
+</head>
+<body>
+    <div class="container-adicionar">
+        <h2>Adicionar Produto à Venda</h2>
+        <form autocomplete="off" onsubmit="mostrarMensagem(event)">
+            <label for="nome_produto">Nome do Produto:</label>
+            <input type="text" id="nome_produto" name="nome_produto" required>
+
+            <label for="empresa">Nome da Empresa Criadora:</label>
+            <input type="text" id="empresa" name="empresa" required>
+
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" name="categoria" required>
+                <option value="">Selecione...</option>
+                <option value="Orgânico">Orgânico</option>
+                <option value="Agrotóxico">Agrotóxico</option>
+            </select>
+
+            <label for="preco">Preço (R$):</label>
+            <input type="number" id="preco" name="preco" min="0" step="0.01" required>
+
+            <label for="foto">Foto do Produto:</label>
+            <input type="file" id="foto" name="foto" accept="image/*" onchange="previewImagem(event)">
+            <img id="preview-img" alt="Prévia da imagem">
+
+            <label for="descricao">Descrição do Produto:</label>
+            <textarea id="descricao" name="descricao" required></textarea>
+
+            <button type="submit" class="btn-salvar">Salvar Produto</button>
+        </form>
+        <a href="/paginas de compra/vendas dos produtores/index.html" class="btn-voltar">&#8592; Voltar</a>
+    </div>
+    <div id="mensagem-flutuante" style="
+        display:none;
+        position:fixed;
+        left:50%;
+        top:30%;
+        transform:translate(-50%, -50%);
+        background:#14532d;
+        color:#fff;
+        padding:32px 48px;
+        border-radius:16px;
+        font-size:1.5em;
+        font-weight:bold;
+        box-shadow:0 4px 24px #0005;
+        z-index:2000;
+        text-align:center;
+    ">
+        Produto cadastrado com sucesso!
+    </div>
+    <footer style="position:fixed; left:0; bottom:0; width:100%; background:#14532d; color:#fff; text-align:center; padding:18px 0 12px 0; font-size:1em; letter-spacing:1px; z-index:100; box-shadow:0 -2px 8px #0002;">
+        <p style="margin:0; font-size:1.1em;">
+            &copy; 2025 Conecta Campo. Todos os direitos reservados. &cirE; Edelvan Bassanesi 3° Ano
+        </p>
+        <h5 style="margin:8px 0 0 0; font-weight:normal;">Professor: Luciano dos Santos</h5>
+        <h6 style="margin:4px 0 0 0; font-weight:normal;">Colégio Estadual Barão do Rio Branco</h6>
+    </footer>
+    <script>
+        function previewImagem(event) {
+            const input = event.target;
+            const preview = document.getElementById('preview-img');
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                preview.src = '';
+                preview.style.display = 'none';
+            }
+        }
+        function mostrarMensagem(e) {
+            e.preventDefault();
+            var msg = document.getElementById('mensagem-flutuante');
+            msg.style.display = 'block';
+            setTimeout(function(){
+                msg.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

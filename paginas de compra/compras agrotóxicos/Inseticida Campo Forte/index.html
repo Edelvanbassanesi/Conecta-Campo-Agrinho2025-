@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inseticida Campo Forte | Conecta Campo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/logo.png">
+    <style>
+        body {
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            padding-bottom: 140px;
+        }
+        .produto-detalhe-container {
+            max-width: 900px;
+            margin: 60px auto 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px #0001;
+            display: flex;
+            gap: 0;
+            overflow: hidden;
+        }
+        .produto-foto {
+            flex: 1;
+            background: #eafaf2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 260px;
+            max-width: 340px;
+            padding: 32px 0;
+        }
+        .produto-foto img {
+            width: 90%;
+            max-width: 220px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #36967133;
+            object-fit: contain;
+        }
+        .produto-info {
+            flex: 2;
+            padding: 36px 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .produto-info h2 {
+            color: #14532d;
+            margin-top: 0;
+            margin-bottom: 18px;
+        }
+        .produto-info p {
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 18px;
+        }
+        .produto-preco {
+            color: #a83232;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 24px;
+        }
+        .botoes-produto {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+        .btn-carrinho, .btn-comprar {
+            background: linear-gradient(90deg, #a83232 60%, #14532d 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 32px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 8px #a8323233;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .btn-carrinho:hover, .btn-comprar:hover {
+            background: linear-gradient(90deg, #14532d 60%, #a83232 100%);
+            transform: scale(1.05);
+        }
+        .descricao-produto {
+            max-width: 900px;
+            margin: 32px auto 0 auto;
+            background: #fbeaea;
+            border-radius: 12px;
+            padding: 28px 32px;
+            color: #a83232;
+            font-size: 1.1em;
+            box-shadow: 0 2px 8px #a8323222;
+        }
+        #mensagem-flutuante {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 30%;
+            transform: translate(-50%, -50%);
+            background: #14532d;
+            color: #fff;
+            padding: 32px 48px;
+            border-radius: 16px;
+            font-size: 1.5em;
+            font-weight: bold;
+            box-shadow: 0 4px 24px #0005;
+            z-index: 2000;
+            text-align: center;
+        }
+        .voltar {
+            position: fixed;
+            left: 50%;
+            bottom: 90px;
+            transform: translateX(-50%);
+            background: #14532d;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 32px;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 2px 8px #0002;
+            z-index: 1001;
+            transition: background 0.2s, transform 0.2s;
+            text-align: center;
+        }
+        .voltar:hover {
+            background: #a83232;
+            transform: translateX(-50%) scale(1.05);
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background: #14532d;
+            color: #fff;
+            text-align: center;
+            padding: 18px 0 12px 0;
+            font-size: 1em;
+            letter-spacing: 1px;
+            z-index: 100;
+            box-shadow: 0 -2px 8px #0002;
+        }
+        @media (max-width: 700px) {
+            .produto-detalhe-container, .descricao-produto {
+                flex-direction: column;
+                max-width: 98vw;
+                padding: 18px 4vw;
+            }
+            .produto-foto, .produto-info {
+                padding: 24px 4vw;
+            }
+            .descricao-produto {
+                padding: 18px 4vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="produto-detalhe-container">
+        <div class="produto-foto">
+            <img src="/img/www.agrovesso.com.br.png" alt="Inseticida Campo Forte">
+        </div>
+        <div class="produto-info">
+            <h2>Inseticida Campo Forte</h2>
+            <p>Proteção eficaz contra pragas comuns em plantações. Fácil aplicação e alta durabilidade.</p>
+            <div class="produto-preco">R$ 120,00</div>
+            <div class="botoes-produto">
+                <button class="btn-carrinho" onclick="mensagem('Produto adicionado ao carrinho!')">Adicionar ao Carrinho</button>
+                <button class="btn-comprar" onclick="mensagem('Compra realizada com sucesso!')">Comprar</button>
+                <a href="/paginas de compra/conversar/index.html"><button class="btn-comprar">Conversar com o vendedor</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="descricao-produto">
+        <h3>Sobre o produto</h3>
+        <p>
+            O <strong>Inseticida Campo Forte</strong> é indicado para o controle de diversas pragas agrícolas, proporcionando proteção eficiente e prolongada para sua lavoura. Sua fórmula foi desenvolvida para garantir máxima eficácia com baixo impacto ambiental, sendo de fácil aplicação e rápida ação.<br><br>
+            Ideal para produtores que buscam segurança, produtividade e qualidade em suas plantações. Siga sempre as recomendações de uso e mantenha fora do alcance de crianças e animais domésticos.
+        </p>
+    </div>
+    <div id="mensagem-flutuante"></div>
+    <a href="/paginas de compra/compras agrotóxicos/index.html" class="voltar">&#8592; Voltar</a>
+    <footer>
+        <p style="margin:0; font-size:1.1em;">
+            &copy; 2025 Conecta Campo. Todos os direitos reservados. &cirE; Edelvan Bassanesi 3° Ano
+        </p>
+        <h5 style="margin:8px 0 0 0; font-weight:normal;">Professor: Luciano dos Santos</h5>
+        <h6 style="margin:4px 0 0 0; font-weight:normal;">Colégio Estadual Barão do Rio Branco</h6>
+    </footer>
+    <script>
+        function mensagem(texto) {
+            var msg = document.getElementById('mensagem-flutuante');
+            msg.textContent = texto;
+            msg.style.display = 'block';
+            setTimeout(function(){
+                msg.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

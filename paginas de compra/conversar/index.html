@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversar com o Vendedor | Conecta Campo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/logo.png">
+</head>
+<body>
+    <div class="chat-container">
+        <aside class="sidebar">
+            <h3>Vendedores</h3>
+            <div class="vendedores-lista" id="vendedoresLista">
+                <div class="vendedor active" onclick="selecionarVendedor(this, 'João Vendas')">
+                    <img src="/img/homem-de-negocios.png" alt="João Vendas" alt=" href="https://www.flaticon.com/br/icones-gratis/homem" title="homem ícones">
+                    <span>João Vendas</span>
+                </div>
+                <div class="vendedor" onclick="selecionarVendedor(this, 'Maria Agro')">
+                    <img src="/img/mulher.png" alt="Maria Agro">
+                    <span>Maria Agro</span>
+                </div>
+                <div class="vendedor" onclick="selecionarVendedor(this, 'Carlos Orgânicos')">
+                    <img src="/img/homem-de-negocios.png" alt="Carlos Orgânicos">
+                    <span>Carlos Orgânicos</span>
+                </div>
+                <div class="vendedor" onclick="selecionarVendedor(this, 'Fernanda Campo')">
+                    <img src="/img/mulher.png" alt="Fernanda Campo">
+                    <span>Fernanda Campo</span>
+                </div>
+            </div>
+        </aside>
+        <section class="chat-main">
+            <div class="chat-header" id="chatHeader">Conversando com João Vendas</div>
+            <div class="chat-mensagens" id="chatMensagens">
+                <div class="mensagem vendedor">Olá! Como posso ajudar?</div>
+            </div>
+            <form class="chat-input-area" onsubmit="enviarMensagem(event)">
+                <input type="text" id="mensagemInput" placeholder="Digite sua mensagem..." autocomplete="off" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+    <a href="/carrinho/index.html" class="voltar"  onmouseover="this.style.background='#218838';this.style.transform='translateX(-50%) scale(1.05)';"
+      onmouseout="this.style.background='#14532d';this.style.transform='translateX(-50%)';">
+        &#8592; Voltar
+    </a>
+    <footer style="position:fixed; left:0; bottom:0; width:100%; background:#14532d; color:#fff; text-align:center; padding:18px 0 12px 0; font-size:1em; letter-spacing:1px; z-index:100; box-shadow:0 -2px 8px #0002;">
+        <p style="margin:0; font-size:1.1em;">
+            &copy; 2025 Conecta Campo. Todos os direitos reservados. &cirE; Edelvan Bassanesi 3° Ano
+        </p>
+        <h5 style="margin:8px 0 0 0; font-weight:normal;">Professor: Luciano dos Santos</h5>
+        <h6 style="margin:4px 0 0 0; font-weight:normal;">Colégio Estadual Barão do Rio Branco</h6>
+    </footer>
+    <script>
+        function enviarMensagem(event) {
+            event.preventDefault();
+            const input = document.getElementById('mensagemInput');
+            const texto = input.value.trim();
+            if (!texto) return;
+            const chat = document.getElementById('chatMensagens');
+            const msg = document.createElement('div');
+            msg.className = 'mensagem usuario';
+            msg.textContent = texto;
+            chat.appendChild(msg);
+            input.value = '';
+            chat.scrollTop = chat.scrollHeight;
+            // Simulação de resposta automática do vendedor
+            setTimeout(() => {
+                const resposta = document.createElement('div');
+                resposta.className = 'mensagem vendedor';
+                resposta.textContent = 'Recebido! Em breve retorno.';
+                chat.appendChild(resposta);
+                chat.scrollTop = chat.scrollHeight;
+            }, 1200);
+        }
+        function selecionarVendedor(element, nome) {
+            document.querySelectorAll('.vendedor').forEach(v => v.classList.remove('active'));
+            element.classList.add('active');
+            document.getElementById('chatHeader').textContent = 'Conversando com ' + nome;
+            document.getElementById('chatMensagens').innerHTML = '<div class="mensagem vendedor">Olá! Como posso ajudar?</div>';
+        }
+    </script>
+</body>
+</html>
